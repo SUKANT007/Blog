@@ -1,27 +1,53 @@
+import { useState } from "react";
 import "./style.css";
+import searchIcon from "../../assets/icons/search.png";
+import { NavLink } from "react-router-dom";
+
+// const searchIcon = require("../../assets/icons/search.png");
 const Navbar = (props) => {
+	require("../../assets/icons/search.png");
+	const [search, setSearch] = useState(false);
+
+	const submitSearch = (e) => {
+		e.preventDefault();
+		alert("Searched");
+	};
+
+	const openSearch = () => {
+		setSearch(true);
+	};
+
+	const searchClass = search ? "searchInput active" : "searchInput";
 	return (
 		<div className="navbar">
 			<ul className="navbarMenu">
 				<li>
-					<a href="#">Home</a>
+					<NavLink to="/">Home</NavLink>
 				</li>
 				<li>
-					<a href="#">About Us</a>
+					<NavLink to="/about-us">About Us</NavLink>
 				</li>
 				<li>
-					<a href="#">Posts</a>
+					<NavLink to="/post">Posts</NavLink>
 				</li>
 				<li>
-					<a href="#">Contact Us</a>
+					<NavLink to="/contact-us">Contact Us</NavLink>
 				</li>
 			</ul>
 			<div className="search">
-				<input type="text" placeholder="Search" />
-				<img
-					src={require("../../assets/icons/search.png")}
-					alt="Search"
-				/>
+				<form onSubmit={submitSearch}>
+					<input
+						type="text"
+						className={searchClass}
+						placeholder="Search"
+					/>
+					<img
+						onClick={openSearch}
+						className="searchIcon"
+						src={searchIcon}
+						alt="Search"
+					/>
+				</form>
 			</div>
 		</div>
 	);
