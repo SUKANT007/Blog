@@ -4,22 +4,18 @@ import "./style.css";
 // import postImage from '../../blogPostImages/memories-from.jpg';
 import blogPost from "../../data/blog.json";
 
-
-
 const BlogPost = (props) => {
-
-
   const [post, setPost] = useState({
     id: "",
-    blogCategory: '',
+    blogCategory: "",
     blogTitle: "",
     postedOn: "",
     author: "",
     blogImage: "",
-    blogText: ""
-
+    blogText: "",
   });
-  const [postId, setPostId] = useState('');
+
+  const [postId, setPostId] = useState("");
   useEffect(() => {
     const postId = props.match.params.postId;
     const post = blogPost.data.find((post) => post.id == postId);
@@ -36,21 +32,21 @@ const BlogPost = (props) => {
           <span className="blogCategory">{post.blogCategory}</span>
           <h1 className="postTitle">{post.blogTitle}</h1>
           <span className="postedBy">
-            posted on  {post.postedOn} by {post.author}
+            posted on {post.postedOn} by {post.author}
           </span>
         </div>
 
         <div className="postImageContainer">
-          <img src={require('../../blogPostImages/' + post.blogImage).default} alt="Post Image" />
+          <img
+            src={require("../../blogPostImages/" + post.blogImage).default}
+            alt="Post Image"
+          />
         </div>
 
         <div className="postContent">
           <h3>{post.blogTitle}</h3>
-          <p>
-            {post.blogText}
-          </p>
+          <p>{post.blogText}</p>
         </div>
-
       </Card>
     </div>
   );
