@@ -45,6 +45,38 @@ const Sidebar = (props) => {
       >
         <div className="cardHeader">
           <span>Social Network</span>
+          <div className="social">
+            <ul className="icons">
+              <li>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="fa fa-facebook"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.pinterest.com/"
+                  target="_blank"
+                  class="fa fa-pinterest"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="fa fa-instagram"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  class="fa fa-twitter"
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </Card>
 
