@@ -7,17 +7,17 @@ import ContactUS from "./containers/ContactUS";
 import Post from "./containers/Post";
 
 function App() {
-	return (
-		<Router>
-			<div className="App">
-				<Header />
-				<Hero />
-				<Route path="/" exact component={Home} />
-				<Route path="/contact-us" component={ContactUS} />
-				<Route path="/post/:postId" component={Post} />
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <Hero />
+        <Route path="/" exact component={Home} />
+        <Route path="/contact-us" component={ContactUS} />
+        <Route path="/post/:slug" component={Post} />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
