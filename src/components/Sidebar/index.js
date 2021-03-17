@@ -31,7 +31,7 @@ const Sidebar = (props) => {
         <div className="cardBody">
           <p className="personalBio">
             My name is Sukant Arora I am a software developer specialization in
-            Algorithms....
+            Algorithms.
           </p>
         </div>
       </Card>

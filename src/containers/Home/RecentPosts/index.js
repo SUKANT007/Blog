@@ -7,23 +7,19 @@ const RecentPosts = (props) => {
         <div className="postImageWrapper">
           <img
             src={
-              "https://2.bp.blogspot.com/-ZOY5OAvnKj0/V9_M3_TVTLI/AAAAAAAAD40/UQl4rIoqgi42zaeq0yR_y1gnnchZFxupQCLcB/s1600/3-3.jpg"
+              "https://cdn.wallpapersafari.com/88/99/bdGzIw.jpg"
             }
             alt="image"
           />
         </div>
         <div style={{ textAlign: "center" }}>
           <span>Featured</span>
-          <h2>Fitness Mantra To Live Fit Life</h2>
-          <span>posted onJuly 21, 2016 bySora Blogging Tips</span>
+          <h2>Know more about Daily Dose</h2>
+          <span>Posted on March 14, 2021 by Adarsh Verma, Praveen Mishra and Sukant Arora.</span>
           <p>
-            Midst first it, you're multiply divided. There don't, second his one
-            given the he one third rule fruit, very. Fill. Seed give firm...
-            Extremity direction existence as Dashwood's do up. Securing Marianne
-            led welcomed offended but offering six rapt...
+            There are a couple of blogs discussing our project in the most minute of details, and you are always welcome to know more about it by giving our project report a glance.
           </p>
-
-          <button>Read More</button>
+		  <p>PS: The image associated with this post is a random image.</p>
         </div>
       </Card>
     </div>
