@@ -14,9 +14,9 @@
 .postTitle {
   letter-spacing: 0.5px;
   text-transform: capitalize;
-  font-size: 30px;
+  font-size: 60px;
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .postedBy {
@@ -44,7 +44,8 @@
 }
 
 .postContent h3 {
-  font-weight: 400;
+  font-weight: 500;
+  font-size:15px;
   color: #333;
 }
 

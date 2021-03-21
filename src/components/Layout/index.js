@@ -9,7 +9,7 @@ const Layout = (props) => {
         <Sidebar />
       </div>
       <div>
-        <h1>This Footer for all pages</h1>
+        <h1></h1>
       </div>
     </React.Fragment>
   );
