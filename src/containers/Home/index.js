@@ -18,7 +18,7 @@ const ImageGallery = (props) => (
     <section style={{ width: props.largeWidth }}>
       <div className="mainImageWrapper">
         <img
-          src={require("../../blogPostImages/" + props.imagesArray[1]).default}
+          src={require("../../blogPostImages/" + props.imagesArray[6]).default}
           alt="test image"
         />
       </div>
