@@ -1,6 +1,13 @@
 import "./style.css";
 import Card from "../../../components/UI/Card";
+import blogPost from "../../../data/blog.json";
+import { useHistory } from "react-router-dom";
+
 const RecentPosts = (props) => {
+  let blogArr = blogPost.data;
+  blogArr = blogArr.filter((item) => item.blogCategory === "Simple");
+  let history = useHistory();
+
   return (
     <div style={props.style}>
       <Card style={{ marginBottom: "20px" }}>
@@ -22,6 +29,31 @@ const RecentPosts = (props) => {
 		  <p>PS: The image associated with this post is a random image.</p>
         </div>
       </Card>
+      {blogArr.map((post) => {
+        return (
+          <Card style={{ marginBottom: "20px" }}>
+            <div className="postImageWrapper">
+              <img
+                src={
+                  require("../../../blogPostImages/" + post.blogImage).default
+                }
+                alt="test image"
+              />
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <span>{post.blogCategory}</span>
+              <h2>{post.blogTitle}</h2>
+              <span>{post.postedOn}</span>
+              <p>{post.blogText}</p>
+              {console.log(props)}
+
+              <button onClick={() => history.push("/post/" + post.slug)}>
+                Read More
+              </button>
+            </div>
+          </Card>
+        );
+      })}
     </div>
   );
 };

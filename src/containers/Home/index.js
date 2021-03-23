@@ -18,7 +18,7 @@ const ImageGallery = (props) => (
     <section style={{ width: props.largeWidth }}>
       <div className="mainImageWrapper">
         <img
-          src={require("../../blogPostImages/" + props.imagesArray[1]).default}
+          src={require("../../blogPostImages/" + props.imagesArray[6]).default}
           alt="test image"
         />
       </div>
@@ -57,7 +57,8 @@ const Home = (props) => {
       </Card>
 
       <Layout>
-        <RecentPosts style={{ width: "70%" }} />
+        <RecentPosts {...props} style={{ width: "70%" }} />
+        {console.log(props)}
         {/* <Card style={{ marginBottom: "20px" }}>Post 2</Card> */}
       </Layout>
     </div>
