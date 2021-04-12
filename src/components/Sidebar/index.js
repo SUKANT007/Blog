@@ -30,8 +30,7 @@ const Sidebar = (props) => {
         </div>
         <div className="cardBody">
           <p className="personalBio">
-            My name is Sukant Arora I am a software developer specialization in
-            Algorithms.
+            Team Members : Adarsh Kumar Verma, Praveen Mishra, Sukant Arora.
           </p>
         </div>
       </Card>

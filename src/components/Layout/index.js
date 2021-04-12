@@ -8,8 +8,8 @@ const Layout = (props) => {
         {props.children}
         <Sidebar />
       </div>
-      <div>
-        <h1></h1>
+      <div> 
+        {/* <h1>Footer for all pages</h1> */}
       </div>
     </React.Fragment>
   );
